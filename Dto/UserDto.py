@@ -8,7 +8,7 @@ def RegistrationUser():
     phone = input("Ведите номер телефона")
     email = input("Ведите адрес электронной почты")
     user = User(name=name,surname=surname,phone=phone,email=email)
-    user.save
+    user.save()
 
 def ChangeUserByPhone(phone:str):
     user = User.select().where(User.phone == phone).get()
